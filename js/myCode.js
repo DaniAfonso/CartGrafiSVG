@@ -16,7 +16,7 @@ $(document).ready(function () {
 });
 
 function modificarModal(i) {
-    console.log(i);
+    $("#md-body-info").attr("ident", i);
     $("#md-title").text(ip[i].titulo);
     let $img = $("#md-body-info").children().eq(0);
     $img.attr("src", path + ip[i].img);
@@ -26,4 +26,42 @@ function modificarModal(i) {
     $("#md-body-info").children().eq(1).text("Año: " + ip[i].año);
     $("#md-body-info").children().eq(2).text("Género: " + ip[i].genero);
     $("#md-body-info").children().eq(3).text("Sinopsis: " + ip[i].sinopsis);
+}
+
+let votante = {
+    nombre: "",
+    email: "",
+    voto: ""
+}
+
+let jsVotantes;
+
+function saveVote() {
+    let nombre = $("#inputName").val();
+    let email = $("#inputEmail").val();
+    let index = $("#md-body-info").attr("ident");
+
+    jsVotantes.push({
+        nombre: nombre,
+        email: email,
+        voto: index
+    })
+
+    localStorage.setItem("jsVotantes", JSON.stringify(jsVotantes));
+    console.log(jsVotantes)
+}
+
+function cargar() {
+    let local;
+
+    local = localStorage.getItem("jsVotantes");
+    if (local != null) {
+        jsVotantes = JSON.parse(local);
+        console.log(local);
+        jsVotantes.forEach(function (value, indice, array) {
+            console.log(value);
+        })
+    } else {
+        jsVotantes = [];
+    }
 }
