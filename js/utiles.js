@@ -6,4 +6,31 @@ let cardTitle =
     " <p class='card-text'></p>" +
     "<a href='#' id='ct-btn' class='btn btn-primary' data-toggle='modal' data-target='#myModal'>Información</a> " +
     "</div>" +
-    "</div>"
+    "</div>";
+
+var tipos = [{
+    title: 'Resultados de la votación:',
+    is3D: true
+}, {
+    title: 'Resultados de la votación:',
+    pieHole: 0.4,
+}, {
+    title: 'Resultados de la votación',
+    legend: 'none',
+    pieSliceText: 'label',
+    slices: {
+        4: {
+            offset: 0.2
+        },
+        12: {
+            offset: 0.3
+        },
+        14: {
+            offset: 0.4
+        },
+        15: {
+            offset: 0.5
+        },
+    }
+
+}]

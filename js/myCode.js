@@ -23,14 +23,16 @@ function modificarModal(i) {
     $img.attr("class", "img-fluid");
     $img.attr("alt", "Imagen portada " + ip[i].titulo);
     $img.attr("style", "width: 30%");
-    $("#md-body-info").children().eq(1).text("Año: " + ip[i].año);
-    $("#md-body-info").children().eq(2).text("Género: " + ip[i].genero);
-    $("#md-body-info").children().eq(3).text("Sinopsis: " + ip[i].sinopsis);
+    $("#md-body-info").children().eq(1).children().eq(0).text("Título: " + ip[i].titulo);
+    $("#md-body-info").children().eq(1).children().eq(1).text("Año: " + ip[i].año);
+    $("#md-body-info").children().eq(1.).children().eq(2).text("Género: " + ip[i].genero);
+    $("#md-body-info").children().eq(1).children().eq(3).text("Sinopsis: " + ip[i].sinopsis);
 }
 
 let votante = {
     nombre: "",
     email: "",
+    telefono: "",
     voto: ""
 }
 
@@ -39,11 +41,13 @@ let jsVotantes;
 function saveVote() {
     let nombre = $("#inputName").val();
     let email = $("#inputEmail").val();
+    let telefono = $("#inputTelefono").val();
     let index = $("#md-body-info").attr("ident");
 
     jsVotantes.push({
         nombre: nombre,
         email: email,
+        telefono: telefono,
         voto: index
     })
 

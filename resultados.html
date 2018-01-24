@@ -36,15 +36,24 @@
             </div>
         </nav>
     </div>
+
     <!-- Contenedor graficos -->
     <div class="container" style="margin-top: 30px;">
-        <div id="cuerpo" class="row">
-            <!-- Todo el código generado -->
-            <div id="piechart" style="width: 900px; height: 500px;"></div>
-
+        <div id="cuerpo" class="d-flex flex-wrap justify-content-around">
+            <p>Elige el tipo de gráfico que deseas: </p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" ident="0" onclick="makeChart(0)" class="btn btn-secondary">Tarta</button>
+                <button type="button" ident="1" onclick="makeChart(1)" class="btn btn-secondary">Donut</button>
+                <button type="button" ident="2" onclick="makeChart(2)" class="btn btn-secondary">Desbordado</button>
+            </div>
         </div>
+        <div style=" height: 600px;" class="d-flex flex-wrap justify-content-around">
+                <div class="col-12" id="piechart" style="height: 100%;"></div>
+        </div>
+        <!-- Todo el código generado -->
+        
     </div>
-    
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
