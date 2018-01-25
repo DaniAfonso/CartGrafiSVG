@@ -1,9 +1,9 @@
 let cardTitle =
     "<div class='cardTitle card text-center' style='width: 30%; min-width: 18rem; margin-top: 2rem;'>" +
-    "<img class='card-img-top' src='recursos/caratulas/avatar.jpg' alt='Card image cap'>" +
+    "<img aria-hidden='true' class='card-img-top' src='recursos/caratulas/avatar.jpg' alt='Card image cap'>" +
     "<div class='card-body'> " +
-    " <h5 class='card-title'></h5>" +
-    " <p class='card-text'></p>" +
+    " <h5 tab-index='0' class='card-title'></h5>" +
+    " <p tab-index='1' class='card-text'></p>" +
     "<a href='#' id='ct-btn' class='btn btn-primary' data-toggle='modal' data-target='#myModal'>Información</a> " +
     "</div>" +
     "</div>";
@@ -33,4 +33,9 @@ var tipos = [{
         },
     }
 
+},{
+    title: 'Resultados de la votación',
+    backgroundColor : "#f1f1f1",
+    is3D: true,
+    vAxis : {textPosition : 'in'}
 }]

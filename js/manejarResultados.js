@@ -2,7 +2,7 @@ let jsVotantes;
 let jsPeliculas;
 
 $(document).ready(function () {
-    makeChart(0);
+    makeChart(3);
 });
 
 function makeChart(e) {
@@ -15,7 +15,8 @@ function makeChart(e) {
         var data = google.visualization.arrayToDataTable(recuperarPeliculas());
         var options = tipos[e];
 
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        //var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        var chart = new google.visualization.BarChart(document.getElementById('piechart'));
         chart.draw(data, options);
     }
 }

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/myStyle.css">
-    <title>UT5-T08 SVG</title>
+    <title>Catálogo de películas</title>
 </head>
 
 <body onload="cargar()">
@@ -33,10 +33,6 @@
                         <a class="nav-link" href="resultados.html">Resultados</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
             </div>
         </nav>
     </div>
@@ -58,15 +54,21 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div id="md-body-info" >
-                            <img src="" alt="" style="text-align: center">
-                            <div class="d-flex flex-wrap justify-content-around">
-                                <p></p>
-                                <p></p>
-                                <p></p>
-                                <p></p>
-                            </div>
+                        <div id="md-body-info">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img aria-hidden="true" id="md-img" src="" alt="" style="text-align: center">
+                                </div>
 
+                                <div class="col-md-8" id="md-res">
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                            </div>
                         </div>
                         <hr>
                         <div id="md-body-form">
