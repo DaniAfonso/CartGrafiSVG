@@ -25,7 +25,7 @@ function modificarModal(i) {
     $img.attr("style", "width: 100%");
     $("#md-res").children().eq(0).text("Título: " + ip[i].titulo);
     $("#md-res").children().eq(1).text("Año: " + ip[i].año);
-    $("#md-res").children().eq(2).text("Duracion: " + ip[i].duracion);
+    $("#md-res").children().eq(2).text("Duracion: " + ip[i].duracion + " minutos");
     $("#md-res").children().eq(3).text("Pais: " + ip[i].pais);
     $("#md-res").children().eq(4).text("Género: " + ip[i].genero);
     $("#md-res").children().eq(5).text("Sinopsis: " + ip[i].sinopsis);

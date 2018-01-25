@@ -1,11 +1,13 @@
 let jsVotantes;
 let jsPeliculas;
+let elegido = 0;
 
 $(document).ready(function () {
-    makeChart(3);
+    makeChart(elegido);
 });
 
 function makeChart(e) {
+    elegido = e;
     google.charts.load('current', {
         'packages': ['corechart']
     });
@@ -13,10 +15,11 @@ function makeChart(e) {
 
     function drawChart() {
         var data = google.visualization.arrayToDataTable(recuperarPeliculas());
-        var options = tipos[e];
-
-        //var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-        var chart = new google.visualization.BarChart(document.getElementById('piechart'));
+        var options = tipos[elegido];
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        if (elegido == 1) {
+            chart = new google.visualization.BarChart(document.getElementById('piechart'));
+        }
         chart.draw(data, options);
     }
 }
@@ -48,3 +51,6 @@ function cargar() {
         jsVotantes = [];
     }
 }
+$(window).resize(function () {
+    makeChart(elegido);
+});
