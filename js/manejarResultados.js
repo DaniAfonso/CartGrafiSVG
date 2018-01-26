@@ -3,7 +3,7 @@ let jsPeliculas;
 let elegido = 0;
 
 $(document).ready(function () {
-    makeChart(elegido);
+    //makeChart(elegido);
 });
 
 function makeChart(e) {
@@ -16,12 +16,13 @@ function makeChart(e) {
     function drawChart() {
         var data = google.visualization.arrayToDataTable(recuperarPeliculas());
         var options = tipos[elegido];
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        var chart = new google.visualization.PieChart(document.getElementById('grafica'));
         if (elegido == 1) {
-            chart = new google.visualization.BarChart(document.getElementById('piechart'));
+            chart = new google.visualization.BarChart(document.getElementById('grafica'));
         }
         chart.draw(data, options);
     }
+    $('#grafica').focus();
 }
 
 function recuperarPeliculas() {

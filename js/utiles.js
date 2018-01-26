@@ -4,7 +4,7 @@ let cardTitle =
     "<div class='card-body'> " +
     " <h1 tabindex='0' class='card-title'></h1>" +
     " <p  tabindex='0' class='card-text'></p>" +
-    "<a href='#' aria-label='Botón de información' tabindex='0' class='btn btn-primary' data-toggle='modal' data-target='#myModal'>Información</a> " +
+    "<button type='button' href='#' aria-label='Pulse enter para ver más información.' tabindex='0' class='btn btn-primary' data-toggle='modal' data-target='#myModal'>Información</button> " +
     "</div>" +
     "</div>";
 

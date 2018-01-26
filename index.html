@@ -13,33 +13,35 @@
 <body onload="cargar()">
     <!-- Navbar -->
     <div class="container">
-        <nav aria-hidden="true" class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav aria-label="Página web de votaciones de películas." class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="index.html">
-                <img src="recursos/logos/imax-logo.svg" alt="Logo de la empresa" width="70" height="50">
+                <img  aria-label="Link para volver al índice." src="recursos/logos/imax-logo.svg" alt="Logo de la empresa" width="70" height="50">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            <!--
+            <button tabindex="-1" aria-hidden="true" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Peliculas
-                            <span class="sr-only">(current)</span>
+            <div tabindex="-1" class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul aria-hidden="true" class="navbar-nav mr-auto">
+                    <li aria-label="Películas" class="nav-item active">
+                        <a  tabindex="0" class="nav-link" href="index.html">Peliculas
+                            <span  class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="resultados.html">Resultados</a>
+                    <li  aria-label="Resultados" class="nav-item">
+                        <a  class="nav-link" href="resultados.html">Resultados</a>
                     </li>
                 </ul>
             </div>
+        -->
         </nav>
     </div>
 
     <!-- Contenedor películas -->
     <div class="container" style="margin-top: 30px;">
-        <div id="cuerpo" class="d-flex flex-wrap justify-content-around">
+        <div tabindex="0" aria-label="Contenedor de películas, aquí se muestran las diez películas a votar." id="cuerpo" class="d-flex flex-wrap justify-content-around">
             <!-- Todo el código generado -->
         </div>
     </div>
@@ -50,7 +52,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 aria-hidden='true' class="modal-title" id="md-title">Nombre de la película</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Botón de cerrar.">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -73,18 +75,18 @@
                         </div>
                         <hr>
                         <div id="md-body-form">
-                            <p tabindex="0">Rellena el formulario para participar en el sorteo</p>
+                            <p tabindex="0">Rellena el formulario para participar en el sorteo.</p>
                             <form class="form" action="resultados.html">
                                 <div class="form-group">
-                                    <label for="inputName">Nombre</label>
+                                    <label for="inputName">Nombre.</label>
                                     <input type="text" required class="form-control" id="inputName"  placeholder="Introduce un nombre">
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputEmail">Correo</label>
+                                    <label for="inputEmail">Correo.</label>
                                     <input type="email" required class="form-control" id="inputEmail" aria-describedby="inputEmail" placeholder="Introduce un correo">
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputTelefono">Telefono</label>
+                                    <label for="inputTelefono">Telefono.</label>
                                     <input type="text" required class="form-control" id="inputTelefono" aria-describedby="inputTelefono" placeholder="Introduce un numero">
                                 </div>
                                 <button onclick="saveVote(this)" type="submit" class="btn btn-primary">Votar</button>
