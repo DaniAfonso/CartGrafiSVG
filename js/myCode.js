@@ -6,6 +6,7 @@ $(document).ready(function () {
 
     $(".cardTitle").each(function (i) {
         $(this).children().eq(0).attr("src", path + ip[i].img);
+        $(this).children().eq(0).attr("alt", ip[i].titulo);
         $(this).children().eq(1).children().eq(0).text(ip[i].titulo);
         $(this).children().eq(1).children().eq(1).text(ip[i].sinopsis.substring(0, 100) + "...");
         $(this).children().eq(1).children().eq(2).attr("href", ip[i].id);
